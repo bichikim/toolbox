@@ -1,9 +1,3 @@
-/**
- *
- * @author Bichi Kim <bichi@pjfactory.com>
- * @copyright PJ Factory Co.
- * @license Private
- */
 import {expect} from 'chai'
 import {EventListeners} from './EventListeners'
 describe('EventListeners', () => {

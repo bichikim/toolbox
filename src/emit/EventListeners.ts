@@ -1,9 +1,3 @@
-/**
- *
- * @author Bichi Kim <bichi@pjfactory.com>
- * @copyright PJ Factory Co.
- * @license Private
- */
 import _ from 'lodash'
 import {TEventListener} from './EventEmit'
 interface IEventListenersOptions {

@@ -1,7 +1,3 @@
-/**
- *
- * @author Bichi Kim <bichi@live.co.kr> <bichi@pjfactory.com>
- */
 import forEach from 'lodash/forEach'
 import isObject from 'lodash/isObject'
 type TRunner = (

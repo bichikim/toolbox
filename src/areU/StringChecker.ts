@@ -1,9 +1,3 @@
-/**
- *
- * @author Bichi Kim <bichi@pjfactory.com>
- * @copyright PJ Factory Co.
- * @license Private
- */
 import _ from 'lodash'
 import {ITypeChecker, TypeChecker} from './TypeChecker'
 const emailReg = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i

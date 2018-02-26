@@ -1,9 +1,3 @@
-/**
- *
- * @author Bichi Kim <bichi@pjfactory.com>
- * @copyright PJ Factory Co.
- * @license Private
- */
 import {EventListeners, IEventListeners} from './EventListeners'
 
 export interface IEventEmitOnOptions {
