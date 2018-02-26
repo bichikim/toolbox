@@ -1,0 +1,11 @@
+/docs
+/src
+/typings
+/build
+/media
+.eslintignore
+.eslintrc.js
+test/karma.config.js
+tsconfig.json
+tslint.json
+.babelrc
