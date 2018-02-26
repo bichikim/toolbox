@@ -1,5 +1,5 @@
 import {expect} from 'chai'
-import {any, array, boolean, number, object, string, validate} from './index'
+import {any, array, boolean, number, object, string, validate} from './'
 describe('are-u', () => {
   describe('string', () => {
     it('can validate', () => {

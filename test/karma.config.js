@@ -1,14 +1,16 @@
 module.exports = function(config) {
-  return {
+  config.set({
     browsers: ['ChromeWithoutSecurity'],
     frameworks: ['mocha', 'chai'],
     reporters: ['spec'],
     files: [
-      {pattern: './src/**/*.spec.js', watched: false},
+      {pattern: '../src/**/*.spec.js', watched: false},
+      {pattern: './spec/**/*.spec.js', watched: false},
     ],
     exclude: [],
     preprocessors: {
-      './src/**/*.js': ['webpack', 'sourcemap'],
+      '../src/**/*.js': ['webpack', 'sourcemap'],
+      '../src/**/*.ts': ['webpack', 'sourcemap'],
     },
     webpack: require('../build/webpack.test.conf.js'),
     webpackMiddleware: {
@@ -25,5 +27,5 @@ module.exports = function(config) {
     mime: {
       'text/x-typescript': ['ts'],
     },
-  }
+  })
 }

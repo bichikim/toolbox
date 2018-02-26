@@ -25,17 +25,18 @@ const forEachRun = (
     runner(key, item, isSave, state, payload)
   })
 }
-
-export const assign = (state: {} = {}, payload: {} = {}, isSave = false) => {
+const merge = (state: {} = {}, payload: {} = {}, isSave = false) => {
   const save = (key, item, isSave, state) => {
     state[key] = item
   }
   forEachRun(state, payload, save, isSave)
 }
 
-export const deepAssign = (state: {} = {}, payload: {} = {}, isSave = false) => {
+export default merge
+
+export const mergeDeep = (state: {} = {}, payload: {} = {}, isSave = false) => {
   const save = (key, item) => {
-    assign(state[key], item, isSave)
+    merge(state[key], item, isSave)
   }
   forEachRun(state, payload, save, isSave)
 }
@@ -48,11 +49,11 @@ const deepInfinitySave = (
   ) => {
   const stateData = state[key]
   if(isObject(item) && isObject(stateData)){
-    deepInfinityAssign(stateData, item, isSave)
+    mergeInfinity(stateData, item, isSave)
     return
   }
   state[key] = item
 }
-export const deepInfinityAssign = (state: {} = {}, payload: {} = {}, isSave = false) => {
+export const mergeInfinity = (state: {} = {}, payload: {} = {}, isSave = false) => {
   forEachRun(state, payload, deepInfinitySave, isSave)
 }
